@@ -1,0 +1,20 @@
+error C2039: 'Pass' : is not a member of 'ID3DXEffect' 
+http://www.gameres.com/thread_123506_1_1.html
+
+error C2039: BeginPass is not a member of ID3DXEffect
+http://www.gamedev.net/topic/496538-error-c2039-beginpass--is-not-a-member-of-id3dxeffect/
+
+Windows Debugging Symbols - Not Loading
+http://stackoverflow.com/questions/7136823/windows-debugging-symbols-not-loading
+
+error LNK1104 : d3dx9dt.lib 파일을 열 수 없습니다.
+http://ranoworld.tistory.com/entry/error-LNK1104-d3dx9dtlib-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EC%97%B4-%EC%88%98-%EC%97%86%EC%8A%B5%EB%8B%88%EB%8B%A4
+
+error C2061: 구문 오류: 식별자 'LPDIRECTXFILEDATA'
+http://sshioi.tistory.com/9
+
+DxSDK9.0c(apr2005) 버젼에서 없어진 내용들 어찌 해야 하나요?
+http://www.gpgstudy.com/m/forum/post/23726
+
+FXC : error X3501: 'main': entrypoint not found
+http://stackoverflow.com/questions/20363360/fxc-error-x3501-main-entrypoint-not-found
