@@ -288,7 +288,9 @@ HRESULT		CBall::FrameMove( float	fElapsedTime )
 
 	if( g_bNowServe )
 	{
+#ifdef	_DEBUG
 		sprintf_s( g_buf, 256, "%3.f, %3.f, %3.f, %3.f, %3.f, %3.f", m_matT._41, m_matT._42, m_matT._43, m_vVelocity.x, m_vVelocity.y, m_vVelocity.z);
+#endif
 		//SetWindowText(GetActiveWindow(), g_buf);
 	}
 
@@ -316,10 +318,12 @@ HRESULT		CBall::Render(LPDIRECT3DDEVICE9 pDevice)
 			{
 				pDevice->SetMaterial( &m_pMaterials[i] );
 				pDevice->SetTexture( 0, m_ppTex[i] );
-				pEffect->Pass(0);
+				pEffect->BeginPass(0);
 				m_pBall->DrawSubset(i);
-				pEffect->Pass(1);
+				pEffect->EndPass();
+				pEffect->BeginPass(1);
 				m_pBall->DrawSubset(i);
+				pEffect->EndPass();
 			}
 			pEffect->End();
 		}
@@ -332,10 +336,12 @@ HRESULT		CBall::Render(LPDIRECT3DDEVICE9 pDevice)
 			{
 				pDevice->SetMaterial( &m_pMaterials[i] );
 				pDevice->SetTexture( 0, m_ppTex[i] );
-				pEffect->Pass(0);
+				pEffect->BeginPass(0);
 				m_pBall->DrawSubset(i);
-				pEffect->Pass(1);
+				pEffect->EndPass();
+				pEffect->BeginPass(1);
 				m_pBall->DrawSubset(i);
+				pEffect->EndPass();
 			}
 			pEffect->End();
 		}
@@ -368,8 +374,9 @@ HRESULT		CBall::Render(LPDIRECT3DDEVICE9 pDevice)
 			{
 				pDevice->SetMaterial( &m_pMaterials[i] );
 				pDevice->SetTexture( 0, m_ppTex[i] );
-				pEffect->Pass(1);
+				pEffect->BeginPass(1);
 				m_pBall->DrawSubset(i);
+				pEffect->EndPass();
 			}
 			pEffect->End();
 		}
@@ -387,10 +394,12 @@ HRESULT		CBall::Render(LPDIRECT3DDEVICE9 pDevice)
 			{
 				pDevice->SetMaterial( &m_pMaterials[i] );
 				pDevice->SetTexture( 0, m_ppTex[i] );
-				pEffect->Pass(0);
+				pEffect->BeginPass(0);
 				m_pBall->DrawSubset(i);
-				pEffect->Pass(1);
+				pEffect->EndPass();
+				pEffect->BeginPass(1);
 				m_pBall->DrawSubset(i);
+				pEffect->EndPass();
 			}
 			pEffect->End();
 		}

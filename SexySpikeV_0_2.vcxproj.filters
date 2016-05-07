@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{963a599c-50dc-4489-86f5-cc6185d60a62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{c567e411-fe97-47ff-91c9-8d091243a5c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AnimationModel">
+      <UniqueIdentifier>{aa429275-caaf-4090-9125-f6a5bf79cfec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{569385c8-76f4-41ab-aa7a-3054ad050635}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Character">
+      <UniqueIdentifier>{f33efc43-3533-4467-95fe-b457fe4521ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{fc472321-e0d5-4d42-94e2-48b541f4de76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effect">
+      <UniqueIdentifier>{4645c928-16d6-4f02-8d81-532520fcfa75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Camera">
+      <UniqueIdentifier>{b11a910d-0478-4ee5-bbcc-cf56429cce87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Classes">
+      <UniqueIdentifier>{c161f62f-c132-4068-8173-9443ec434f4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Input&amp;Font">
+      <UniqueIdentifier>{4bed56b9-9e93-4134-95cf-81764afb212a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Network">
+      <UniqueIdentifier>{0f6d0f26-ebd7-454a-9b84-98ec216b9813}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\d3dapp.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\d3denumeration.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\d3dfile.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\d3dfont.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\d3dsettings.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\d3dutil.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\dxstdafx.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\dxutil.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Background.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Ball.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Net.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\AllocateHierarchy.cpp">
+      <Filter>AnimationModel</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Frame.cpp">
+      <Filter>AnimationModel</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MeshContainer.cpp">
+      <Filter>AnimationModel</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Character.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\CharacterAnimationController.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\NPC.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Player.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\User.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\CrashManager.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\EffectManager.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\KeyManager.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\CameraAnimationController.cpp">
+      <Filter>_Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\CameraAnimationModel.cpp">
+      <Filter>_Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\McCamera.cpp">
+      <Filter>_Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\McCamManager.cpp">
+      <Filter>_Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CharacterSelect.cpp">
+      <Filter>_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\EndGame.cpp">
+      <Filter>_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameSceneManager.cpp">
+      <Filter>_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameTexture.cpp">
+      <Filter>_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\HowtoPlay.cpp">
+      <Filter>_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\MiMp3.cpp">
+      <Filter>_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\MultiPlay.cpp">
+      <Filter>_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\StartScreen.cpp">
+      <Filter>_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Input\McInput.cpp">
+      <Filter>_Input&amp;Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Client.cpp">
+      <Filter>_Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\NetworkDlg.cpp">
+      <Filter>_Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\Packet.cpp">
+      <Filter>_Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Network\RingBuffer.cpp">
+      <Filter>_Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\DEFAULT_INLINE.cpp" />
+    <ClCompile Include="SexySpikeEtc.cpp" />
+    <ClCompile Include="SexySpikeSinglePlay.cpp" />
+    <ClCompile Include="SexySpikeV_0_2.cpp" />
+    <ClCompile Include="SexySpikeV_0_2_1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\d3dapp.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\d3denumeration.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\d3dfile.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\d3dfont.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\d3dsettings.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\d3dutil.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\dxstdafx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\dxutil.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Background.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Ball.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Net.h">
+      <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\AllocateHierarchy.h">
+      <Filter>AnimationModel</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Frame.h">
+      <Filter>AnimationModel</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\MeshContainer.h">
+      <Filter>AnimationModel</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\Networkresource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Character.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CharacterAnimationController.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\NPC.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Player.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\User.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CrashManager.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\EffectManager.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\KeyManager.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\CameraAnimationController.h">
+      <Filter>_Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\CameraAnimationModel.h">
+      <Filter>_Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\McCamera.h">
+      <Filter>_Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\McCamManager.h">
+      <Filter>_Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\McUtil.h">
+      <Filter>_Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CharacterSelect.h">
+      <Filter>_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\EndGame.h">
+      <Filter>_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameSceneManager.h">
+      <Filter>_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameTexture.h">
+      <Filter>_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\HowtoPlay.h">
+      <Filter>_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\MiMp3.h">
+      <Filter>_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\MultiPlay.h">
+      <Filter>_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\StartScreen.h">
+      <Filter>_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\CDrawText.h">
+      <Filter>_Input&amp;Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Input\McInput.h">
+      <Filter>_Input&amp;Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\_NetworkAfx.h">
+      <Filter>_Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\_NetworkDefine.h">
+      <Filter>_Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Client.h">
+      <Filter>_Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\NetworkDlg.h">
+      <Filter>_Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\Packet.h">
+      <Filter>_Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Network\RingBuffer.h">
+      <Filter>_Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\DEFAULT_INCLUDE.h" />
+    <ClInclude Include="Include\DEFAULT_INILINE.h" />
+    <ClInclude Include="Include\INCLUDE.h" />
+    <ClInclude Include="Include\MACRO.h" />
+    <ClInclude Include="Include\SexySpike.h" />
+    <ClInclude Include="Common\d3dres.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resource\directx.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\Network.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="Resource\winmain.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Ex.txt" />
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Effect\Effect_Ball.fx">
+      <Filter>Effect</Filter>
+    </FxCompile>
+    <FxCompile Include="Effect\Effect_Character.fx">
+      <Filter>Effect</Filter>
+    </FxCompile>
+    <FxCompile Include="Effect\Effect_Main.fx">
+      <Filter>Effect</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

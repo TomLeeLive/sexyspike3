@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3A68081D-E8F9-4523-9436-530DE9E552FC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.23107.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>../output/</OutDir>
+    <IntDir>../output/obj/</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../output/</OutDir>
+    <IntDir>../output/obj/</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\BookCommon\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4078 /MACHINE:I386 /IGNORE:4089 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>d3dxof.lib;dxguid.lib;d3dx9d.lib;d3d9.lib;DxErr.lib;comctl32.lib;winmm.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)SexySpikeV_0_2.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)SexySprikeV_0_1.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>..\BookCommon\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/ignore:4078 /MACHINE:I386 /IGNORE:4089 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>d3dxof.lib;dxguid.lib;d3dx9.lib;d3d9.lib;comctl32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)SexySprikeV_0_1.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera\CameraAnimationController.cpp" />
+    <ClCompile Include="Camera\CameraAnimationModel.cpp" />
+    <ClCompile Include="Camera\McCamera.cpp" />
+    <ClCompile Include="Camera\McCamManager.cpp" />
+    <ClCompile Include="Classes\CharacterSelect.cpp" />
+    <ClCompile Include="Classes\EndGame.cpp" />
+    <ClCompile Include="Classes\GameSceneManager.cpp" />
+    <ClCompile Include="Classes\GameTexture.cpp" />
+    <ClCompile Include="Classes\HowtoPlay.cpp" />
+    <ClCompile Include="Classes\MiMp3.cpp" />
+    <ClCompile Include="Classes\MultiPlay.cpp" />
+    <ClCompile Include="Classes\StartScreen.cpp" />
+    <ClCompile Include="Common\d3dapp.cpp" />
+    <ClCompile Include="Common\d3denumeration.cpp" />
+    <ClCompile Include="Common\d3dfile.cpp" />
+    <ClCompile Include="Common\d3dfont.cpp" />
+    <ClCompile Include="Common\d3dsettings.cpp" />
+    <ClCompile Include="Common\d3dutil.cpp" />
+    <ClCompile Include="Common\dxstdafx.cpp" />
+    <ClCompile Include="Common\dxutil.cpp" />
+    <ClCompile Include="Include\User.cpp" />
+    <ClCompile Include="Input\McInput.cpp" />
+    <ClCompile Include="Network\Client.cpp" />
+    <ClCompile Include="Network\NetworkDlg.cpp" />
+    <ClCompile Include="Network\Packet.cpp" />
+    <ClCompile Include="Network\RingBuffer.cpp" />
+    <ClCompile Include="SexySpikeEtc.cpp" />
+    <ClCompile Include="SexySpikeSinglePlay.cpp" />
+    <ClCompile Include="SexySpikeV_0_2.cpp" />
+    <ClCompile Include="SexySpikeV_0_2_1.cpp" />
+    <ClCompile Include="Src\AllocateHierarchy.cpp" />
+    <ClCompile Include="Src\Background.cpp" />
+    <ClCompile Include="Src\Ball.cpp" />
+    <ClCompile Include="Src\Character.cpp" />
+    <ClCompile Include="Src\CharacterAnimationController.cpp" />
+    <ClCompile Include="Src\CrashManager.cpp" />
+    <ClCompile Include="Src\DEFAULT_INLINE.cpp" />
+    <ClCompile Include="Src\EffectManager.cpp" />
+    <ClCompile Include="Src\Frame.cpp" />
+    <ClCompile Include="Src\KeyManager.cpp" />
+    <ClCompile Include="Src\MeshContainer.cpp" />
+    <ClCompile Include="Src\Net.cpp" />
+    <ClCompile Include="Src\NPC.cpp" />
+    <ClCompile Include="Src\Player.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera\CameraAnimationController.h" />
+    <ClInclude Include="Camera\CameraAnimationModel.h" />
+    <ClInclude Include="Camera\McCamera.h" />
+    <ClInclude Include="Camera\McCamManager.h" />
+    <ClInclude Include="Camera\McUtil.h" />
+    <ClInclude Include="Classes\CharacterSelect.h" />
+    <ClInclude Include="Classes\EndGame.h" />
+    <ClInclude Include="Classes\GameSceneManager.h" />
+    <ClInclude Include="Classes\GameTexture.h" />
+    <ClInclude Include="Classes\HowtoPlay.h" />
+    <ClInclude Include="Classes\MiMp3.h" />
+    <ClInclude Include="Classes\MultiPlay.h" />
+    <ClInclude Include="Classes\StartScreen.h" />
+    <ClInclude Include="Common\d3dapp.h" />
+    <ClInclude Include="Common\d3denumeration.h" />
+    <ClInclude Include="Common\d3dfile.h" />
+    <ClInclude Include="Common\d3dfont.h" />
+    <ClInclude Include="Common\d3dres.h" />
+    <ClInclude Include="Common\d3dsettings.h" />
+    <ClInclude Include="Common\d3dutil.h" />
+    <ClInclude Include="Common\dxstdafx.h" />
+    <ClInclude Include="Common\dxutil.h" />
+    <ClInclude Include="Include\AllocateHierarchy.h" />
+    <ClInclude Include="Include\Background.h" />
+    <ClInclude Include="Include\Ball.h" />
+    <ClInclude Include="Include\Character.h" />
+    <ClInclude Include="Include\CharacterAnimationController.h" />
+    <ClInclude Include="Include\CrashManager.h" />
+    <ClInclude Include="Include\DEFAULT_INCLUDE.h" />
+    <ClInclude Include="Include\DEFAULT_INILINE.h" />
+    <ClInclude Include="Include\EffectManager.h" />
+    <ClInclude Include="Include\Frame.h" />
+    <ClInclude Include="Include\INCLUDE.h" />
+    <ClInclude Include="Include\KeyManager.h" />
+    <ClInclude Include="Include\MACRO.h" />
+    <ClInclude Include="Include\MeshContainer.h" />
+    <ClInclude Include="Include\Net.h" />
+    <ClInclude Include="Include\NPC.h" />
+    <ClInclude Include="Include\Player.h" />
+    <ClInclude Include="Include\SexySpike.h" />
+    <ClInclude Include="Include\User.h" />
+    <ClInclude Include="Input\CDrawText.h" />
+    <ClInclude Include="Input\McInput.h" />
+    <ClInclude Include="Network\Client.h" />
+    <ClInclude Include="Network\NetworkDlg.h" />
+    <ClInclude Include="Network\Packet.h" />
+    <ClInclude Include="Network\RingBuffer.h" />
+    <ClInclude Include="Network\_NetworkAfx.h" />
+    <ClInclude Include="Network\_NetworkDefine.h" />
+    <ClInclude Include="Resource\Networkresource.h" />
+    <ClInclude Include="Resource\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resource\directx.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource\Network.rc" />
+    <ResourceCompile Include="Resource\winmain.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Ex.txt" />
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Effect\Effect_Ball.fx">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Effect</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Effect</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Effect\Effect_Character.fx">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Effect</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Effect</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Effect\Effect_Main.fx">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Effect</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Effect</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

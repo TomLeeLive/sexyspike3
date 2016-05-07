@@ -21,7 +21,7 @@
 #include	<time.h>
 
 #include	<D3DX9.h>
-#include	<DXERR9.h>
+#include	<DxErr.h>
 #include	"../Common/DXUtil.h"
 #include	"../Common/D3DEnumeration.h"
 #include	"../Common/D3DSettings.h"

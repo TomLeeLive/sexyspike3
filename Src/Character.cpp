@@ -447,11 +447,13 @@ HRESULT	Character::DrawMeshContainer(LPDIRECT3DDEVICE9	pDevice,  LPD3DXFRAME pFr
 						pEffect->SetTechnique( "IndexedSkinning" );
 						pEffect->Begin( NULL, 0 );
 						pEffect->SetMatrix( "World", &matWorld );
-						pEffect->Pass(2);
+						pEffect->BeginPass(2);
 						hr	= pMeshContainer->MeshData.pMesh->DrawSubset( i );
-						pEffect->Pass(3);
+						pEffect->EndPass();
+						pEffect->BeginPass(3);
 						pEffect->SetMatrix( "World", &matShadow );
 						hr	= pMeshContainer->MeshData.pMesh->DrawSubset( i );
+						pEffect->EndPass();
 						CHECK_FAILED( hr );
 						pEffect->End();
 					}
@@ -608,12 +610,14 @@ HRESULT	Character::DrawMeshContainerByHLSL(LPDIRECT3DDEVICE9	pDevice, LPD3DXMESH
 		pDevice->SetTexture( 0, pMeshContainer->m_ppTextures[AttrId] );
 		pEffect->SetTechnique( "IndexedSkinning" );
 		CHECK_FAILED(pEffect->Begin( NULL, 0 ));
-		CHECK_FAILED(pEffect->Pass(0));
+		CHECK_FAILED(pEffect->BeginPass(0));
 		CHECK_FAILED(pMeshContainer->MeshData.pMesh->DrawSubset(AttrId));
+		CHECK_FAILED(pEffect->EndPass());
 		if( m_bDrawShadow )
 		{
-			CHECK_FAILED(pEffect->Pass(1));
+			CHECK_FAILED(pEffect->BeginPass(1));
 			CHECK_FAILED(pMeshContainer->MeshData.pMesh->DrawSubset(AttrId));
+			CHECK_FAILED(pEffect->EndPass());
 		}
 		CHECK_FAILED(pEffect->End());
 	}

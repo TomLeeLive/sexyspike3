@@ -277,11 +277,12 @@ HRESULT	SexySpike::RenderAfterImage()
 
 	CHECK_FAILED_GOTO(pEffect->SetTechnique("TAfterImage"), RELEASE);
 	CHECK_FAILED_GOTO(pEffect->Begin(NULL, 0), RELEASE);
-	CHECK_FAILED_GOTO(pEffect->Pass(0), RELEASE);
+	CHECK_FAILED_GOTO(pEffect->BeginPass(0), RELEASE);
 	CHECK_FAILED_GOTO(m_pd3dDevice->SetTexture(0, m_pPostTex[1-ix]), RELEASE);
 	CHECK_FAILED_GOTO(m_pd3dDevice->SetStreamSource(0, m_pPost, 0, sizeof(SimpleVertex2)), RELEASE);
 	CHECK_FAILED_GOTO(m_pd3dDevice->SetFVF(SimpleVertex2::SimpleVertex2FVF), RELEASE);
 	CHECK_FAILED_GOTO(m_pd3dDevice->DrawPrimitive(D3DPT_TRIANGLEFAN, 0, 2), RELEASE);
+	CHECK_FAILED_GOTO(pEffect->EndPass(), RELEASE);
 	CHECK_FAILED_GOTO(pEffect->End(), RELEASE);
 	if( (50.f<D3DXVec3Length(m_pBall->GetVelocity())) && (BLACKHOLE!=m_pBall->GetBalltype()))
 	{
@@ -349,11 +350,12 @@ HRESULT	SexySpike::RenderInversion()
 
 	pEffect->SetTechnique( "TInversion" );
 	pEffect->Begin( NULL, 0);
-	pEffect->Pass(0);
+	pEffect->BeginPass(0);
 	CHECK_FAILED(m_pd3dDevice->SetTexture(0, m_pPostTex[ix]));
 	CHECK_FAILED(m_pd3dDevice->SetStreamSource(0, m_pPost, 0, sizeof(SimpleVertex2)));
 	CHECK_FAILED(m_pd3dDevice->SetFVF(SimpleVertex2::SimpleVertex2FVF));
 	CHECK_FAILED(m_pd3dDevice->DrawPrimitive( D3DPT_TRIANGLEFAN, 0, 2 ));
+	pEffect->EndPass();
 	pEffect->End();
 
 

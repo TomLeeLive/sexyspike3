@@ -171,7 +171,7 @@ HRESULT CD3DMesh::Create( LPDIRECT3DDEVICE9 pd3dDevice,
     HRESULT      hr;
 
     // Load the mesh from the DXFILEDATA object
-    if( FAILED( hr = D3DXLoadMeshFromXof( pFileData, D3DXMESH_SYSTEMMEM, pd3dDevice,
+    if( FAILED( hr = D3DXLoadMeshFromXof( (LPD3DXFILEDATA)pFileData, D3DXMESH_SYSTEMMEM, pd3dDevice,
                                           &pAdjacencyBuffer, &pMtrlBuffer, NULL,
                                           &m_dwNumMaterials, &m_pSysMemMesh ) ) )
     {
