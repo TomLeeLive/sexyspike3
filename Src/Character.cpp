@@ -301,13 +301,15 @@ HRESULT	Character::FrameMove( float fElapsedTime )
 {
 	HRESULT	hr = S_OK;
 
+	float fMove = fElapsedTime * 0.6f;
+
 	//	애니메이션 상태 갱신( 여러 인스턴스에서 같이 사용하므로 FrameMove와 Render두군데서 갱신한다.
 	m_fElapsedTime	= fElapsedTime;	
 
 	D3DXMatrixRotationY( &m_matR, m_fRotationAngle );
 	m_matWorld	= m_matS*m_matR*m_matT;
 
-	m_pAniController->FrameMove( m_fElapsedTime );	
+	m_pAniController->FrameMove(fMove);
 	UpdateFrameMatrices( m_pFrameRoot,  &m_matWorld );	
 
 	m_BoundingBody.UpdateBoundingCenter();
