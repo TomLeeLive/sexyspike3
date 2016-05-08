@@ -71,6 +71,8 @@ void		CUser::ConfirmCharacterKeyState()
 		m_playInfo.PLAYSTATE	=  SERVE == m_playInfo.PLAYSTATE? OFFENSE : SERVE;
 	}
 
+	float fMove = m_fElapsedTime * 100.0f;
+
 	eBehavior	eCurrent = this->GetCurrentBehavior();
 	if(	!m_bNowJumping && !m_bMoveLock )
 	{
@@ -81,8 +83,8 @@ void		CUser::ConfirmCharacterKeyState()
 			{
 				m_pAniController->SetAnimationSet( ("WALKFORWARD") );
 			}
-			m_matT._41 += g_dir[U].x;
-			m_matT._43 += g_dir[U].z;
+			m_matT._41 += g_dir[U].x * fMove;
+			m_matT._43 += g_dir[U].z * fMove;
 		}
 
 		if( g_keys.GetCurrentState( VK_LEFT ) )
@@ -91,8 +93,8 @@ void		CUser::ConfirmCharacterKeyState()
 			{
 				m_pAniController->SetAnimationSet( ("WALKLEFT") );
 			}
-			m_matT._41 += g_dir[L].x;
-			m_matT._43 += g_dir[L].z;
+			m_matT._41 += g_dir[L].x * fMove;
+			m_matT._43 += g_dir[L].z * fMove;
 		}
 
 		if( g_keys.GetCurrentState( VK_DOWN ) )
@@ -101,8 +103,8 @@ void		CUser::ConfirmCharacterKeyState()
 			{
 				m_pAniController->SetAnimationSet( ("WALKBACKWARD") );
 			}
-			m_matT._41 += g_dir[B].x;
-			m_matT._43 += g_dir[B].z;
+			m_matT._41 += g_dir[B].x * fMove;
+			m_matT._43 += g_dir[B].z * fMove;
 		}
 
 		if( g_keys.GetCurrentState( VK_RIGHT ) )
@@ -111,8 +113,8 @@ void		CUser::ConfirmCharacterKeyState()
 			{
 				m_pAniController->SetAnimationSet( ("WALKRIGHT") );
 			}
-			m_matT._41 += g_dir[R].x;
-			m_matT._43 += g_dir[R].z;
+			m_matT._41 += g_dir[R].x * fMove;
+			m_matT._43 += g_dir[R].z * fMove;
 		}
 
 		//	캐릭터가 움직인 경우
