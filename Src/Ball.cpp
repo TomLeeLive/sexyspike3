@@ -239,19 +239,21 @@ HRESULT		CBall::FrameMove( float	fElapsedTime )
 {
 	HRESULT		hr	= S_OK;
 
+	float fMove = fElapsedTime * 1.5f;
+
 	m_fRotationAngle	+= 0.1f*D3DXVec3Length( &m_vVelocity );
 	D3DXMatrixRotationAxis( &m_matR, &m_vRotationAxis, D3DXToRadian(m_fRotationAngle) );
 
 	if( !m_bUseMacro )
 	{
-		m_matT._41	+= fElapsedTime*m_vVelocity.x;
-		m_matT._42	+= fElapsedTime*m_vVelocity.y;
-		m_matT._43	+= fElapsedTime*m_vVelocity.z;
-		m_vVelocity	+= fElapsedTime*m_vAccel;
+		m_matT._41	+= fMove * m_vVelocity.x;
+		m_matT._42	+= fMove * m_vVelocity.y;
+		m_matT._43	+= fMove * m_vVelocity.z;
+		m_vVelocity	+= fMove * m_vAccel;
 	}
 	else
 	{
-		ProcessMacro(fElapsedTime);
+		ProcessMacro(fMove);
 	}
 
 	m_matWorld	= m_matR*m_matT;

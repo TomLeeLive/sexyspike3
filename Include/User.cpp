@@ -132,6 +132,7 @@ void		CUser::ConfirmCharacterKeyState()
 
 HRESULT		CUser::FrameMove( float fElapsedTime ) 
 {
+	float fMove = fElapsedTime * 1.5f;
 	HRESULT	hr	= S_OK;
 
 	m_pAniController->FrameMove(0.0f);
@@ -140,15 +141,15 @@ HRESULT		CUser::FrameMove( float fElapsedTime )
 	m_fElapsedTime	= fElapsedTime;
 
 	if( m_bUseMacro )
-		ProcessMacro(fElapsedTime);
+		ProcessMacro(fMove);
 	else
 		ConfirmCharacterKeyState();
 
 	if( m_bNowJumping )
 	{
-		if( m_fJumpTime >= fElapsedTime )
+		if( m_fJumpTime >= fMove)
 		{
-			m_matT._42	+= m_fJumpVelocity * fElapsedTime;
+			m_matT._42	+= m_fJumpVelocity * fMove;
 		}
 		else
 		{
@@ -156,14 +157,14 @@ HRESULT		CUser::FrameMove( float fElapsedTime )
 			m_bNowJumping	= FALSE;
 		}
 
-		m_fJumpVelocity	+= m_fJumpAccel*fElapsedTime;
-		m_fJumpTime		-= fElapsedTime;
+		m_fJumpVelocity	+= m_fJumpAccel*fMove;
+		m_fJumpTime		-= fMove;
 	}
 
 	D3DXMatrixRotationY( &m_matR, m_fRotationAngle );
 	m_matWorld	= m_matS*m_matR*m_matT;
 
-	m_pAniController->FrameMove( m_fElapsedTime );	
+	m_pAniController->FrameMove(fMove);
 	UpdateFrameMatrices( m_pFrameRoot,  &m_matWorld );	
 
 	m_BoundingBody.UpdateBoundingCenter();
@@ -399,6 +400,7 @@ void		CUser::SetMacro(eBehavior BEHAVIOR)
 
 void		CUser::ProcessMacro(float fElapsedTime)
 {
+
 	if( m_macro.ElapsedTime == 0.f )
 	{
 		if( m_macro.TransitionPoint > 0.f )

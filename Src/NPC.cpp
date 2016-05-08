@@ -46,6 +46,8 @@ HRESULT		CNpc::FrameMove( float fElapsedTime )
 {
 	HRESULT	hr	= S_OK;
 
+	float fMove = fElapsedTime * 1.5f;
+
 	//	애니메이션 상태 갱신( 여러 인스턴스에서 같이 사용하므로 FrameMove와 Render두군데서 갱신한다.
 	m_pAniController->FrameMove(0.0f);
 	UpdateFrameMatrices(m_pFrameRoot, &m_matWorld);
@@ -54,7 +56,7 @@ HRESULT		CNpc::FrameMove( float fElapsedTime )
 
 	if( m_bUseMacro )
 	{
-		ProcessMacro(fElapsedTime);
+		ProcessMacro(fMove);
 	}
 	else if( m_bSelfUpdate && (!m_bNowJumping) && (m_playInfo.TEAMMATE->GetPLAYSTATE() != SERVE) )
 	{
@@ -132,9 +134,9 @@ HRESULT		CNpc::FrameMove( float fElapsedTime )
 
 	if( m_bNowJumping )
 	{
-		if( m_fJumpTime >= fElapsedTime )
+		if( m_fJumpTime >= fMove)
 		{
-			m_matT._42	+= m_fJumpVelocity * fElapsedTime;
+			m_matT._42	+= m_fJumpVelocity * fMove;
 
 			if( m_matT._42 < 0.f )
 			{
@@ -148,14 +150,14 @@ HRESULT		CNpc::FrameMove( float fElapsedTime )
 			m_bNowJumping	= FALSE;
 		}
 
-		m_fJumpVelocity	+= m_fJumpAccel*fElapsedTime;
-		m_fJumpTime		-= fElapsedTime;
+		m_fJumpVelocity	+= m_fJumpAccel*fMove;
+		m_fJumpTime		-= fMove;
 	}
 
 	D3DXMatrixRotationY( &m_matR, m_fRotationAngle );
 	m_matWorld	= m_matS*m_matR*m_matT;
 
-	m_pAniController->FrameMove( m_fElapsedTime );	
+	m_pAniController->FrameMove(fMove);
 	UpdateFrameMatrices( m_pFrameRoot,  &m_matWorld );	
 
 	m_BoundingBody.UpdateBoundingCenter();
