@@ -78,4 +78,8 @@ extern	const	void*	LookUpPlayer( PLAY_STATE STATE, eSide SIDE );
 //09-09-07 ¿Ã¿Á¡ÿ
 extern	void	Send( const char* pName, char DEFINITION,  char SIZE, void* pData, char EXETYPE=3, char ORDER=3 );
 
+#define SPEED_USER_MOVE 100.0f
+#define SPEED_GAME 1.5f
+#define SPEED_ANIMATION 0.6f
+
 #endif

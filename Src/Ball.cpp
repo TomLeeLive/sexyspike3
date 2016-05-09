@@ -239,7 +239,7 @@ HRESULT		CBall::FrameMove( float	fElapsedTime )
 {
 	HRESULT		hr	= S_OK;
 
-	float fMove = fElapsedTime * 1.5f;
+	float fMove = fElapsedTime * SPEED_GAME;
 
 	m_fRotationAngle	+= 0.1f*D3DXVec3Length( &m_vVelocity );
 	D3DXMatrixRotationAxis( &m_matR, &m_vRotationAxis, D3DXToRadian(m_fRotationAngle) );

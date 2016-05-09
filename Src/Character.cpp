@@ -301,7 +301,7 @@ HRESULT	Character::FrameMove( float fElapsedTime )
 {
 	HRESULT	hr = S_OK;
 
-	float fMove = fElapsedTime * 0.6f;
+	float fMove = fElapsedTime * SPEED_ANIMATION;
 
 	//	애니메이션 상태 갱신( 여러 인스턴스에서 같이 사용하므로 FrameMove와 Render두군데서 갱신한다.
 	m_fElapsedTime	= fElapsedTime;	

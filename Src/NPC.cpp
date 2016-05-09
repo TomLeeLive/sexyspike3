@@ -46,7 +46,7 @@ HRESULT		CNpc::FrameMove( float fElapsedTime )
 {
 	HRESULT	hr	= S_OK;
 
-	float fMove = fElapsedTime * 1.5f;
+	float fMove = fElapsedTime * SPEED_GAME;
 
 	//	애니메이션 상태 갱신( 여러 인스턴스에서 같이 사용하므로 FrameMove와 Render두군데서 갱신한다.
 	m_pAniController->FrameMove(0.0f);

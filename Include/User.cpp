@@ -71,7 +71,7 @@ void		CUser::ConfirmCharacterKeyState()
 		m_playInfo.PLAYSTATE	=  SERVE == m_playInfo.PLAYSTATE? OFFENSE : SERVE;
 	}
 
-	float fMove = m_fElapsedTime * 100.0f;
+	float fMove = m_fElapsedTime * SPEED_USER_MOVE;
 
 	eBehavior	eCurrent = this->GetCurrentBehavior();
 	if(	!m_bNowJumping && !m_bMoveLock )
@@ -132,7 +132,7 @@ void		CUser::ConfirmCharacterKeyState()
 
 HRESULT		CUser::FrameMove( float fElapsedTime ) 
 {
-	float fMove = fElapsedTime * 1.5f;
+	float fMove = fElapsedTime * SPEED_GAME;
 	HRESULT	hr	= S_OK;
 
 	m_pAniController->FrameMove(0.0f);
