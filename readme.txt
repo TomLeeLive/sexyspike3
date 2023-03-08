@@ -1,15 +1,15 @@
 Sexy Spike3 - 3D Volley Ball Game - v0.2
 
 Developer: Hyokyung Lee. Woongjae Lee. Tom Jaejoon Lee
-E-mail: serialkk@naver.com
+
 Developement Environment: VisualStudio 2008 + DirectX 2003 Summer
 
-Á¶ÀÛÅ°:
- Å°º¸µå ¹æÇâÅ° + 'Z':¸®½Ãºê, Åä½º, 'X': ½ºÆÄÀÌÅ©, 'V':³×Æ®¿¡ °øÀÌ °É¸®¸é °øÀ» »©³À´Ï´Ù.
- °øÀÌ »¡°£»öÀÏ¶§ Å°¸¦ ´©¸£¸é Ä³¸¯ÅÍ°¡ ¾Ë¾Æ¼­ °øÀ» Ä¡°Ô µÇÀÖ½À´Ï´Ù.
- ÇÁ·¹ÀÓ ¼ö°¡ ³·À¸¸é °ÔÀÓÀÌ Á¦´ë·Î µ¿ÀÛÇÏÁö ¾ÊÀ» ¼ö ÀÖ½À´Ï´Ù. ±ÇÀå ÇÁ·¹ÀÓÀº 60ÀÌ»óÀÔ´Ï´Ù.
+ì¡°ìž‘í‚¤:
+ í‚¤ë³´ë“œ ë°©í–¥í‚¤ + 'Z':ë¦¬ì‹œë¸Œ, í† ìŠ¤, 'X': ìŠ¤íŒŒì´í¬, 'V':ë„¤íŠ¸ì— ê³µì´ ê±¸ë¦¬ë©´ ê³µì„ ë¹¼ëƒ…ë‹ˆë‹¤.
+ ê³µì´ ë¹¨ê°„ìƒ‰ì¼ë•Œ í‚¤ë¥¼ ëˆ„ë¥´ë©´ ìºë¦­í„°ê°€ ì•Œì•„ì„œ ê³µì„ ì¹˜ê²Œ ë˜ìžˆìŠµë‹ˆë‹¤.
+ í”„ë ˆìž„ ìˆ˜ê°€ ë‚®ìœ¼ë©´ ê²Œìž„ì´ ì œëŒ€ë¡œ ë™ìž‘í•˜ì§€ ì•Šì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ê¶Œìž¥ í”„ë ˆìž„ì€ 60ì´ìƒìž…ë‹ˆë‹¤.
 
-±ÇÀå»ç¾ç:
- CPU: ÀÎÅÚ µà¾óÄÚ¾î 2.8Ghz
- ¸Þ¸ð¸®: °ÔÀÓ½ÇÇà½Ã 500¸Þ°¡ÀÇ ¸Þ¸ð¸®¸¦ Á¡À¯ÇÏ¹Ç·Î 500¸Þ°¡ ÀÌ»óÀÇ ¸Þ¸ð¸®¸¦ °¡Áø ½Ã½ºÅÛ
- ºñµð¿ÀÄ«µå: ÁöÆ÷½º 9500GTÀÌ»ó
+ê¶Œìž¥ì‚¬ì–‘:
+ CPU: ì¸í…” ë“€ì–¼ì½”ì–´ 2.8Ghz
+ ë©”ëª¨ë¦¬: ê²Œìž„ì‹¤í–‰ì‹œ 500ë©”ê°€ì˜ ë©”ëª¨ë¦¬ë¥¼ ì ìœ í•˜ë¯€ë¡œ 500ë©”ê°€ ì´ìƒì˜ ë©”ëª¨ë¦¬ë¥¼ ê°€ì§„ ì‹œìŠ¤í…œ
+ ë¹„ë””ì˜¤ì¹´ë“œ: ì§€í¬ìŠ¤ 9500GTì´ìƒ
